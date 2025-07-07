@@ -232,8 +232,8 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 **Programadores**
 - GitHub: [@iSamuel22](https://github.com/iSamuel22)
 - Email: samueljubim47@gmail.com
-- GitHub: [@iSamuel22](https://github.com/iSamuel22)
-- Email: samueljubim47@gmail.com
+- GitHub: [@LucasPaschoal](https://github.com/LucasPaschoal)
+- Email: lucaspaschoal@gmail.com
 
 ## 🙏 Agradecimentos
 
