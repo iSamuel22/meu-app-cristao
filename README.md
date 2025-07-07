@@ -208,6 +208,7 @@ flutter build appbundle --release
 ## 📝 Funcionalidades Futuras
 
 - [ ] Notificações push para lembretes
+- [ ] Sistema de Login e Segurança
 - [ ] Backup automático na nuvem
 - [ ] Compartilhamento de devocionais
 - [ ] Temas claro/escuro
@@ -247,13 +248,13 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 📸 Screenshots
 
 ### Tela de Pedidos de Oração
-![Pedidos de Oração](screenshots/oracao.png)
+![Pedidos de Oração](lib/screenshots/pedido_oracao.png)
 
 ### Tela de Devocionais
-![Devocionais](screenshots/devocionais.png)
+![Devocionais](lib/screenshots/devocional.png)
 
 ### Tela de Progresso Bíblico
-![Progresso Bíblico](screenshots/progresso.png)
+![Progresso Bíblico](lib/screenshots/progresso_leitura.png)
 
 ---
 
