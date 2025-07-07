@@ -208,6 +208,7 @@ flutter build appbundle --release
 ## 📝 Funcionalidades Futuras
 
 - [ ] Notificações push para lembretes
+- [ ] Sistema de Login e Segurança
 - [ ] Backup automático na nuvem
 - [ ] Compartilhamento de devocionais
 - [ ] Temas claro/escuro
