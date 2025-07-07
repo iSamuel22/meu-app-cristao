@@ -131,16 +131,6 @@ class Devocional {
 }
 ```
 
-### **Progresso de Leitura**
-```dart
-class ProgressoLeitura {
-  String livro;
-  int capitulo;
-  bool lido;
-  Timestamp marcadoEm;
-}
-```
-
 ## 🔥 Funcionalidades do Firebase
 
 ### **Firestore Collections:**
