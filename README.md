@@ -247,13 +247,13 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 📸 Screenshots
 
 ### Tela de Pedidos de Oração
-![Pedidos de Oração](screenshots/oracao.png)
+![Pedidos de Oração](screenshots/pedido_oracao.png)
 
 ### Tela de Devocionais
-![Devocionais](screenshots/devocionais.png)
+![Devocionais](screenshots/devocional.png)
 
 ### Tela de Progresso Bíblico
-![Progresso Bíblico](screenshots/progresso.png)
+![Progresso Bíblico](screenshots/progresso_leitura.png)
 
 ---
 
