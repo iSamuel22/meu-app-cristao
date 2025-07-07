@@ -74,8 +74,8 @@ lib/
 
 1. **Clone o repositório:**
 ```bash
-git clone https://github.com/seu-usuario/meuAppCristao.git
-cd meuAppCristao
+git clone https://github.com/iSamuel22/meu-app-cristao.git
+cd meu-app-cristao
 ```
 
 2. **Instale as dependências:**
