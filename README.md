@@ -187,15 +187,20 @@ class ProgressoLeitura {
 dependencies:
   flutter:
     sdk: flutter
-  cloud_firestore: ^4.13.6
-  firebase_core: ^2.24.2
-  intl: ^0.18.1
+
+  cupertino_icons: ^1.0.8
+  firebase_core: ^3.14.0
+  cloud_firestore: ^5.6.9
   http: ^1.1.0
+  shared_preferences: ^2.2.2
+  intl: ^0.18.1
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+
+   flutter_lints: ^5.0.0
 ```
 
 ## 🚀 Build e Deploy
