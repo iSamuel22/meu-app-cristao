@@ -18,90 +18,21 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="MeuAppCristao - Aplicativo Cristão">
+  <meta name="description" content="A new Flutter project.">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="MeuAppCristao">
+  <meta name="apple-mobile-web-app-title" content="trabalho_a1">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>MeuAppCristao</title>
+  <title>trabalho_a1</title>
   <link rel="manifest" href="manifest.json">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-      font-family: 'Roboto', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .loading {
-      text-align: center;
-    }
-    .loading h2 {
-      color: #3f51b5;
-      margin-bottom: 20px;
-    }
-    .spinner {
-      width: 40px;
-      height: 40px;
-      border: 4px solid #e0e0e0;
-      border-top: 4px solid #3f51b5;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
 </head>
 <body>
-  <div class="loading">
-    <h2>Carregando MeuAppCristao...</h2>
-    <div class="spinner"></div>
-  </div>
-
-  <!-- Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
-  
-  <script>
-    // Configure Firebase
-    const firebaseConfig = {
-      apiKey: "AIzaSyAkboACqj6Ka7933NyjNIU7amiATyZzLk8",
-      authDomain: "meuappcristao.firebaseapp.com",
-      projectId: "meuappcristao",
-      storageBucket: "meuappcristao.firebasestorage.app",
-      messagingSenderId: "822885725408",
-      appId: "1:822885725408:web:c405d397147ed1ba898c85"
-    };
-    
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
-
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
-    });
-  </script>
+  <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
