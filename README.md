@@ -74,8 +74,8 @@ lib/
 
 1. **Clone o repositório:**
 ```bash
-git clone https://github.com/seu-usuario/meuAppCristao.git
-cd meuAppCristao
+git clone https://github.com/iSamuel22/meu-app-cristao.git
+cd meu-app-cristao
 ```
 
 2. **Instale as dependências:**
@@ -224,17 +224,11 @@ flutter build appbundle --release
 4. Push para a branch (`git push origin feature/NovaFeature`)
 5. Abra um Pull Request
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
 ## 👨‍💻 Autor
 
 **Programadores**
 - GitHub: [@iSamuel22](https://github.com/iSamuel22)
 - Email: samueljubim47@gmail.com
-- GitHub: [@LucasPaschoal](https://github.com/LucasPaschoal)
-- Email: lucaspaschoal@gmail.com
 
 ## 🙏 Agradecimentos
 
