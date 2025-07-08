@@ -229,8 +229,6 @@ flutter build appbundle --release
 **Programadores**
 - GitHub: [@iSamuel22](https://github.com/iSamuel22)
 - Email: samueljubim47@gmail.com
-- GitHub: [@LucasPaschoal](https://github.com/LucasPaschoal)
-- Email: lucaspaschoal@gmail.com
 
 ## 🙏 Agradecimentos
 
