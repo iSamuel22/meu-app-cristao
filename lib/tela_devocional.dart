@@ -221,7 +221,6 @@ class _DevocionaisTelaState extends State<DevocionaisTela> {
         false;
 
     if (confirmar) {
-      // Excluir todos os devocionais
       for (var doc in docs) {
         db.excluir(doc['id']);
       }
@@ -242,7 +241,11 @@ class _DevocionaisTelaState extends State<DevocionaisTela> {
     }
   }
 
-  Future<void> _mostrarConteudoCompleto(String titulo, String conteudo) async {
+  Future<void> _mostrarConteudoCompleto(
+    String titulo,
+    String conteudo,
+    Map<String, dynamic> devocional,
+  ) async {
     await showDialog(
       context: context,
       builder: (context) {
@@ -268,19 +271,6 @@ class _DevocionaisTelaState extends State<DevocionaisTela> {
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
-                // Chama a função de editar
-                Map<String, dynamic> devocional = {
-                  "id": docs.firstWhere(
-                    (doc) =>
-                        doc['titulo'] == titulo && doc['conteudo'] == conteudo,
-                  )['id'],
-                  "titulo": titulo,
-                  "conteudo": conteudo,
-                  "criadoEm": docs.firstWhere(
-                    (doc) =>
-                        doc['titulo'] == titulo && doc['conteudo'] == conteudo,
-                  )['criadoEm'],
-                };
                 _adicionarOuAtualizarDevocional(devocional);
               },
               child: const Text('Editar'),
@@ -364,7 +354,6 @@ class _DevocionaisTelaState extends State<DevocionaisTela> {
                           ),
                         ),
                         const SizedBox(height: 6),
-                        // Indicador para conteúdos longos
                         if (conteudo.length > 150)
                           Container(
                             padding: const EdgeInsets.symmetric(
@@ -428,7 +417,13 @@ class _DevocionaisTelaState extends State<DevocionaisTela> {
                     onTap: () {
                       // só mostra o conteúdo completo se for texto longo
                       if (conteudo.length > 150) {
-                        _mostrarConteudoCompleto(titulo, conteudo);
+                        Map<String, dynamic> devocional = {
+                          "id": docs[index]['id'],
+                          "titulo": docs[index]['titulo'],
+                          "conteudo": docs[index]['conteudo'],
+                          "criadoEm": docs[index]['criadoEm'],
+                        };
+                        _mostrarConteudoCompleto(titulo, conteudo, devocional);
                       } else {
                         // se for texto curto, vai direto para edição
                         Map<String, dynamic> devocional = {

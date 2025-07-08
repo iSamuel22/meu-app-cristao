@@ -21,24 +21,16 @@ class MeuAppCristao extends StatelessWidget {
       title: 'MeuAppCristao',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // cor primária para o tema do aplicativo
         primarySwatch: Colors.indigo,
-        // cor de fundo padrão para os Scaffolds
         scaffoldBackgroundColor: Colors.indigo.shade50,
         appBarTheme: const AppBarTheme(
-          // cor de fundo das AppBars
           backgroundColor: Colors.indigo,
-          // cor do texto e ícones nas AppBars
           foregroundColor: Colors.white,
-          // para centralizar o título da AppBar
           centerTitle: true,
-          // elevation é para definir a sombra da AppBar
           elevation: 2,
         ),
         floatingActionButtonTheme: FloatingActionButtonThemeData(
-          // cor de fundo do FloatingActionButton
           backgroundColor: Colors.indigo.shade700,
-          // cor do ícone do FloatingActionButton
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
@@ -98,17 +90,16 @@ class PaginaPrincipal extends StatefulWidget {
 }
 
 class _PaginaPrincipalState extends State<PaginaPrincipal> {
-  // variável de estado que armazena o índice da aba selecionada
   int _indiceAtual = 0;
 
   // telas que serão exibidas em cada aba da BottomNavigationBar
   final List<Widget> _telas = const [
-    PedidosOracaoTela(), // oração
-    DevocionaisTela(), // devocional
-    LeituraBiblicaTela(), // leitura
+    PedidosOracaoTela(),
+    DevocionaisTela(),
+    LeituraBiblicaTela(),
   ];
 
-  // setState é responsável por atualizar o estado do widget quando um item da BottomNavigationBar é tocado
+  // atualiza o estado do widget quando um item da BottomNavigationBar é tocado
   void _aoTocarItem(int index) {
     setState(() {
       _indiceAtual = index;
@@ -118,7 +109,7 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _telas[_indiceAtual], // Exibe a tela correspondente ao índice atual
+      body: _telas[_indiceAtual], // exibe a tela correspondente ao índice atual
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _indiceAtual,
         onTap: _aoTocarItem,
@@ -130,18 +121,18 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
         elevation: 8,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.handshake_outlined), // ícone quando inativo
-            activeIcon: Icon(Icons.handshake), // ícone quando ativo
+            icon: Icon(Icons.handshake_outlined),
+            activeIcon: Icon(Icons.handshake),
             label: 'Oração',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.auto_stories_outlined), // ícone quando inativo
-            activeIcon: Icon(Icons.auto_stories), // ícone quando ativo
+            icon: Icon(Icons.auto_stories_outlined),
+            activeIcon: Icon(Icons.auto_stories),
             label: 'Devocionais',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book_outlined), // ícone quando inativo
-            activeIcon: Icon(Icons.book), // ícone quando ativo
+            icon: Icon(Icons.book_outlined),
+            activeIcon: Icon(Icons.book),
             label: 'Leitura',
           ),
         ],

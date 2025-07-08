@@ -16,6 +16,7 @@ class BibleVerse {
 
   BibleVerse({this.referencia, this.texto, this.traducao});
 
+  // factory serve para criar instâncias de uma classe a partir de dados JSON
   factory BibleVerse.fromJson(
     Map<String, dynamic> json,
     Map<String, dynamic> verse,

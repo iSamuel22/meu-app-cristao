@@ -12,6 +12,7 @@ class PedidosOracaoTela extends StatefulWidget {
 }
 
 class _PedidosOracaoTelaState extends State<PedidosOracaoTela> {
+  // late é para indicar que a variável será inicializada mais tarde
   late DatabaseOracao db;
   List docs = [];
   bool _isLoading = true;
@@ -212,7 +213,7 @@ class _PedidosOracaoTelaState extends State<PedidosOracaoTela> {
         false; // se o usuário cancelar, retorna false
 
     if (confirmar) {
-      // excluir todos os pedidos
+      // exclui todos os pedidos
       for (var doc in docs) {
         db.excluir(doc['id']);
       }
@@ -233,7 +234,11 @@ class _PedidosOracaoTelaState extends State<PedidosOracaoTela> {
     }
   }
 
-  Future<void> _mostrarConteudoCompleto(String titulo, String conteudo) async {
+  Future<void> _mostrarConteudoCompleto(
+    String titulo,
+    String conteudo,
+    Map<String, dynamic> pedido,
+  ) async {
     await showDialog(
       context: context,
       builder: (context) {
@@ -259,19 +264,6 @@ class _PedidosOracaoTelaState extends State<PedidosOracaoTela> {
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
-                // Chama a função de editar
-                Map<String, dynamic> pedido = {
-                  "id": docs.firstWhere(
-                    (doc) => doc['texto'] == conteudo,
-                  )['id'],
-                  "texto": conteudo,
-                  "respondido": docs.firstWhere(
-                    (doc) => doc['texto'] == conteudo,
-                  )['respondido'],
-                  "criadoEm": docs.firstWhere(
-                    (doc) => doc['texto'] == conteudo,
-                  )['criadoEm'],
-                };
                 _adicionarOuAtualizarPedido(pedido);
               },
               child: const Text('Editar'),
@@ -348,7 +340,7 @@ class _PedidosOracaoTelaState extends State<PedidosOracaoTela> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(height: 4),
-                        // Indicador para textos longos
+                        // indicador para textos longos
                         if (texto.length > 100)
                           Container(
                             padding: const EdgeInsets.symmetric(
@@ -396,7 +388,7 @@ class _PedidosOracaoTelaState extends State<PedidosOracaoTela> {
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        // Botão de editar
+                        // botão de editar
                         IconButton(
                           icon: const Icon(Icons.edit, color: Colors.blue),
                           onPressed: () {
@@ -421,7 +413,17 @@ class _PedidosOracaoTelaState extends State<PedidosOracaoTela> {
                     onTap: () {
                       // só mostra o conteúdo completo se for texto longo
                       if (texto.length > 100) {
-                        _mostrarConteudoCompleto('Pedido de Oração', texto);
+                        Map<String, dynamic> pedido = {
+                          "id": docs[index]['id'],
+                          "texto": docs[index]['texto'],
+                          "respondido": docs[index]['respondido'],
+                          "criadoEm": docs[index]['criadoEm'],
+                        };
+                        _mostrarConteudoCompleto(
+                          'Pedido de Oração',
+                          texto,
+                          pedido,
+                        );
                       } else {
                         // se for texto curto, vai direto para edição
                         Map<String, dynamic> pedido = {
